@@ -1,0 +1,146 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wrapper2Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.todolist.EditTaskActivity" >
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:orientation="vertical"
+            tools:context="com.example.todolist.EditTaskActivity">
+
+            <Spinner
+                android:id="@+id/category"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_modified_states"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Spinner>
+
+            <EditText
+                android:id="@+id/task"
+                android:hint="Summary Of Task"
+                android:textColorHint="#DDAAAAAA"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_modified_states"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/date"
+                android:focusable="false"
+                android:hint="Due Date"
+                android:textColorHint="#DDAAAAAA"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_modified_states"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/time"
+                android:focusable="false"
+                android:hint="Due Time"
+                android:textColorHint="#DDAAAAAA"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_modified_states"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/desc"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="6"
+                android:maxLines="10"
+                android:gravity="top|left"
+                android:hint="Description"
+                android:textColorHint="#DDAAAAAA"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_modified_states"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"/>
+
+            <CheckBox
+                android:id="@+id/reminder"
+                android:text="Set Reminder"
+                android:textColor="#25aaa0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="58dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+            <EditText
+                android:id="@+id/rtime"
+                android:focusable="false"
+                android:hint="Reminder Time"
+                android:textColorHint="#DDAAAAAA"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_modified_states"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <at.markushi.ui.CircleButton
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:src="@mipmap/editbtn11"
+        app:cb_color="#25aaa0"
+        app:cb_pressedRingWidth="15dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/update"
+        android:onClick="update"/>
+
+</RelativeLayout>
